@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Despensa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrito">
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <!-- Primera Fila -->
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <div class="ion-text-center">
+            <img class="img_hab" src="assets/harina.webp" alt="Harina Selecta" />
+          </div>
+          <ion-card-title class="ion-text-center">
+            Harina Selecta
+          </ion-card-title>
+          <ion-item lines="none">
+            <h3>Precio: $1.590</h3>
+          </ion-item>
+          <ion-router-link routerLink="/harina">
+            <ion-button expand="block" style="--background: #000; --color: #fff;">Detalles</ion-button>
+          </ion-router-link>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <div class="ion-text-center">
+            <img class="img_hab" src="assets/arroz.webp" alt="Arroz Miraflores" />
+          </div>
+          <ion-card-title class="ion-text-center">
+            Arroz Miraflores
+          </ion-card-title>
+          <ion-item lines="none">
+            <h3>Precio: $2.290</h3>
+          </ion-item>
+          <ion-router-link routerLink="/arroz">
+            <ion-button expand="block" style="--background: #000; --color: #fff;">Detalles</ion-button>
+          </ion-router-link>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Segunda Fila -->
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <div class="ion-text-center">
+            <img class="img_hab" src="assets/azucar.webp" alt="Azúcar Blanca" />
+          </div>
+          <ion-card-title class="ion-text-center">
+            Azúcar Blanca
+          </ion-card-title>
+          <ion-item lines="none">
+            <h3>Precio: $1.849</h3>
+          </ion-item>
+          <ion-router-link routerLink="/azucar">
+            <ion-button expand="block" style="--background: #000; --color: #fff;">Detalles</ion-button>
+          </ion-router-link>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <div class="ion-text-center">
+            <img class="img_hab" src="assets/fideos.webp" alt="Fideos Spaghetti" />
+          </div>
+          <ion-card-title class="ion-text-center">
+            Fideos Spaghetti
+          </ion-card-title>
+          <ion-item lines="none">
+            <h3>Precio: $1.090</h3>
+          </ion-item>
+          <ion-router-link routerLink="/fideos">
+            <ion-button expand="block" style="--background: #000; --color: #fff;">Detalles</ion-button>
+          </ion-router-link>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

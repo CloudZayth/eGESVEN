@@ -1,0 +1,46 @@
+.carrito-content {
+    padding: 16px;
+  }
+  
+  .promocion {
+    margin-bottom: 10px;
+  }
+  
+  .producto img {
+    width: 100%;
+    max-width: 60px;
+    border-radius: 8px;
+  }
+  
+  .producto h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .producto .regular-price {
+    font-size: 0.9rem;
+    color: gray;
+  }
+  
+  .producto .promo-message {
+    font-size: 0.8rem;
+    color: #007BFF;
+  }
+  
+  .cantidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cantidad p {
+    margin: 4px 0;
+    font-size: 1.1rem;
+  }
+  
+  .footer-message {
+    font-size: 0.9rem;
+    text-align: center;
+    color: gray;
+  }
+  

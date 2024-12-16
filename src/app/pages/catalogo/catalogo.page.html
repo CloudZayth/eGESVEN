@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Catálogo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrito">
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="catalogo-content">
+  <!-- Título Principal -->
+  <div class="catalogo-title">
+    <h1>Catálogo de Productos</h1>
+    <p>Explora nuestras categorías</p>
+  </div>
+
+  <!-- Categorías -->
+  <ion-grid>
+    <!-- Categoría: Despensa -->
+    <ion-row class="categoria" routerLink="/despensa" button>
+      <ion-col size="12">
+        <div class="categoria-row">
+          <h2>Despensa</h2>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <!-- Categoría: Bebidas y Snacks -->
+    <ion-row class="categoria" routerLink="/bebidas-snacks" button>
+      <ion-col size="12">
+        <div class="categoria-row">
+          <h2>Bebidas y Snacks</h2>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+

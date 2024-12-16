@@ -1,0 +1,42 @@
+.catalogo-title {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+  
+.catalogo-title h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+  
+.catalogo-title p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 8px;
+}
+  
+.categoria {
+    margin: 12px 0;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+  
+.categoria-row {
+    text-align: center;
+}
+  
+.categoria-row h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.categoria:hover {
+    background-color: #e9ecef; /* Fondo gris claro al pasar el mouse */
+    transition: background-color 0.3s ease;
+}
+  
+  
+  

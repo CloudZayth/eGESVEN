@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-text-center">
+
+    <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center"> 
+            <div class="animated-image-rotate">
+              <img class="logo" src="assets/logo.png" alt="my image"/>
+            </div> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-card>
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" maxlength="8" minlength="3" [(ngModel)]="usuario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" maxlength="4" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="login()" style="--background: #000; --color: #fff;">Ingresar</ion-button>
+        <ion-router-link routerLink="/registro" class="icon-link"><h6 style="text-align: center;">¿No tienes cuenta? Registrate aquí</h6></ion-router-link>
+      </ion-card>
+
+      
+
+    </ion-card>
+
+  </div>
+
+</ion-content>

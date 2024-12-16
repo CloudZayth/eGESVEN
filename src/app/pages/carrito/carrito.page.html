@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Carrito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="carrito-content">
+  <ion-grid>
+    <!-- Productos en el Carrito -->
+    <ion-row *ngFor="let producto of carrito">
+      <ion-col size="3" class="ion-text-center">
+        <img [src]="producto.imagen" alt="{{ producto.nombre }}" />
+      </ion-col>
+      <ion-col size="5">
+        <h2>{{ producto.cantidad }} x ${{ producto.precio }}</h2>
+        <p class="regular-price">Regular ${{ producto.precio }}</p>
+        <p>{{ producto.nombre }}</p>
+        <p>{{ producto.descripcion }}</p>
+      </ion-col>
+      <ion-col size="2" class="cantidad">
+        <ion-button size="small" (click)="decrementarCantidad(producto.id)" color="light">
+          <ion-icon name="remove-circle-outline"></ion-icon>
+        </ion-button>
+        <p>{{ producto.cantidad }}</p>
+        <ion-button size="small" (click)="incrementarCantidad(producto.id)" color="light">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="2" class="ion-text-right">
+        <h3>${{ producto.precio * producto.cantidad }}</h3>
+      </ion-col>
+    </ion-row>
+
+    <!-- Mensaje si el carrito está vacío -->
+    <ion-row *ngIf="carrito.length === 0">
+      <ion-col size="12" class="ion-text-center">
+        <p>Tu carrito está vacío</p>
+      </ion-col>
+    </ion-row>
+
+    <!-- Total -->
+    <ion-row *ngIf="carrito.length > 0">
+      <ion-col size="12" class="ion-text-right">
+        <h2>Total: ${{ total }}</h2>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botón Vaciar Carrito -->
+    <ion-row *ngIf="carrito.length > 0">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button expand="block" color="danger" (click)="vaciarCarrito()">Vaciar carrito</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Promoción de Despacho -->
+  <ion-footer *ngIf="carrito.length > 0">
+    <ion-toolbar class="footer-message">
+      <p>¡Te faltan ${{ diferenciaDespachoGratis }} para conseguir despacho gratis!</p>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-button expand="block" color="primary" (click)="irAPagar()">Ir a pagar</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+
+
+
+

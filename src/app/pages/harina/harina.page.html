@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Harina Selecta</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrito">
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Imagen del Producto -->
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="8" class="ion-text-center">
+        <img src="assets/harina.webp" alt="Harina Selecta" style="max-width: 100%; height: auto;" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Descripción del Producto -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <h2 class="product-title">Selecta · Harina Sin Polvos De Hornear</h2>
+        <p class="product-weight">1 Kg</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Botón de Más Información -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button expand="block" style="--background: #fff; --color: #007BFF; border: 1px solid #007BFF;">
+          Más información
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Precios y Botón Agregar -->
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="8" class="ion-text-left">
+        <h3>$1.590</h3>
+      </ion-col>
+      <ion-col size="4" class="ion-text-center">
+        <ion-button expand="block" style="--background: #007BFF; --color: #fff;" (click)="agregarAlCarrito()">
+          Agregar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

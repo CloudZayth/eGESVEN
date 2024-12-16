@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bebidas y Snacks</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrito">
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <!-- Primera Fila -->
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <div class="ion-text-center">
+            <img class="img_hab" src="assets/cocacola.webp" alt="Coca-Cola 3L" />
+          </div>
+          <ion-card-title class="ion-text-center">
+            Coca-Cola 3L
+          </ion-card-title>
+          <ion-item lines="none">
+            <h3>Precio: $3.150</h3>
+          </ion-item>
+          <ion-router-link routerLink="/ht-101">
+            <ion-button expand="block" style="--background: #000; --color: #fff;">Detalles</ion-button>
+          </ion-router-link>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <div class="ion-text-center">
+            <img class="img_hab" src="assets/lays_merken.webp" alt="Lay's Merken" />
+          </div>
+          <ion-card-title class="ion-text-center">
+            Lay's Merken
+          </ion-card-title>
+          <ion-item lines="none">
+            <h3>Precio: $1.790</h3>
+          </ion-item>
+          <ion-router-link routerLink="/lays-merken">
+            <ion-button expand="block" style="--background: #000; --color: #fff;">Detalles</ion-button>
+          </ion-router-link>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Segunda Fila -->
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <div class="ion-text-center">
+            <img class="img_hab" src="assets/mani_japones.jpg" alt="Mani Japones" />
+          </div>
+          <ion-card-title class="ion-text-center">
+            Mani Japones
+          </ion-card-title>
+          <ion-item lines="none">
+            <h3>Precio: $859</h3>
+          </ion-item>
+          <ion-router-link routerLink="/azucar">
+            <ion-button expand="block" style="--background: #000; --color: #fff;">Detalles</ion-button>
+          </ion-router-link>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <div class="ion-text-center">
+            <img class="img_hab" src="assets/arizona.jpg" alt="Arizona Frambuesa" />
+          </div>
+          <ion-card-title class="ion-text-center">
+            Arizona Frambuesa
+          </ion-card-title>
+          <ion-item lines="none">
+            <h3>Precio: $2.190</h3>
+          </ion-item>
+          <ion-router-link routerLink="/fideos">
+            <ion-button expand="block" style="--background: #000; --color: #fff;">Detalles</ion-button>
+          </ion-router-link>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
